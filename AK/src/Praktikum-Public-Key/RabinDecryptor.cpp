@@ -92,9 +92,6 @@ bool RabinDecryptor::compute(const Integer& y, vector<Integer>& xv) {
     // also gcd(p, q) == 1 gilt. Ist das nicht der Fall, dann wurden für
     // p und q keine Primzahlen ausgewählt oder p == q.
     if (d != 1) return false;
-    // Überprüfung, ob die Implementation von EEA korrekt ist.
-    assert((mp * q) % p == 1);
-    assert((mq * p) % q == 1);
 
     // Berechnet bp * mp * q + bq * mq * p mod (p * q) für die 4 Kombinationen
     // mit bp und bq und speichert diese im vector xv ab.

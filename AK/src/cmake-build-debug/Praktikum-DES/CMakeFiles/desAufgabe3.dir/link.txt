@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/desAufgabe3.dir/desAufgabe3.cpp.o CMakeFiles/desAufgabe3.dir/DESCipher.cpp.o CMakeFiles/desAufgabe3.dir/BlockCipher.cpp.o  -o ../bin/desAufgabe3 

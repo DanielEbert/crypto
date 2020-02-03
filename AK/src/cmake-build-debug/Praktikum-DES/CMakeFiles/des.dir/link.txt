@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/des.dir/des-main.cpp.o CMakeFiles/des.dir/DESCipher.cpp.o CMakeFiles/des.dir/BlockCipher.cpp.o CMakeFiles/des.dir/des-getopt.c.o  -o ../bin/des 

@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/coindex.dir/coindex-main.cpp.o CMakeFiles/coindex.dir/VigenereBreaker.cpp.o CMakeFiles/coindex.dir/VigenereCipher.cpp.o CMakeFiles/coindex.dir/ClassicCipher.cpp.o CMakeFiles/coindex.dir/coindex-getopt.c.o  -o ../bin/coindex 

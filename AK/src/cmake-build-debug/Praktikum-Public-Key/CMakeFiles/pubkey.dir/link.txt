@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/pubkey.dir/pubkey.cpp.o CMakeFiles/pubkey.dir/RabinDecryptor.cpp.o CMakeFiles/pubkey.dir/PublicKeyAlgorithmBox.cpp.o  -o ../bin/pubkey /usr/lib/x86_64-linux-gnu/libcryptopp.so -lpthread 

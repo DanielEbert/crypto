@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/polybius.dir/polybius-main.cpp.o CMakeFiles/polybius.dir/PolybiusCipher.cpp.o CMakeFiles/polybius.dir/Toolbox.cpp.o CMakeFiles/polybius.dir/polybius-getopt.c.o  -o ../../bin/polybius 

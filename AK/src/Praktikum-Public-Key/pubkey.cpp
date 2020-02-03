@@ -57,20 +57,34 @@ void invExercise() {
     // von 10353 modulo 820343. Falls ein solches existiert, dann wird es in
     // a_inv gespeichert. multInverse liefert auch True zurück, falls ein
     // solches inverses Element existert und False wenn nicht.
-    assert(pb.multInverse(Integer(10353), Integer(820343), a_inv));
+    bool returned = pb.multInverse(Integer(10353), Integer(820343), a_inv);
     cout << "multiplikatives Inverses von 10353 modulo 820343: " << a_inv << endl;
     // Es wird erwartet, dass ein solches multiplikative Inverse existiert und
     // dass dieses 21711 ist.
-    assert(a_inv == Integer(21711));
+    if (!returned || a_inv != Integer(21711)) {
+        cerr << "ERROR: multiplikatives Inverses von 10353 modulo 820343: "
+             << a_inv << ", Erwartet: 21711" << endl;
+    }
     // Es wird erwartet, dass kein multiplikatives Inverses von
     // 10353 modulo 820344 existiert. In diesem Fall liefert multInverse()
     // False zurück.
-    assert(!pb.multInverse(Integer(10353), Integer(820344), a_inv));
+    returned = pb.multInverse(Integer(10353), Integer(820344), a_inv);
+    if (returned) {
+        cerr << "ERROR: multiplikatives Inverses von 10353 modulo 820343: "
+             << a_inv
+             << ", Erwartet: Es existiert kein multiplikatives Inverses."
+             << endl;
+    } else {
+        cout << "Kein multiplikatives Inverses von 10353 modulo 820344 existiert." << endl;
+    }
     // Berechnet das multiplikatives Inverses von 562312 modulo 57913313.
     // Es wird erwartet, dass dieses 53494466 ist.
-    assert(pb.multInverse(Integer(562312), Integer(57913313), a_inv));
+    returned = pb.multInverse(Integer(562312), Integer(57913313), a_inv);
     cout << "multiplikatives Inverses von 562312 modulo 57913313: " << a_inv << endl;
-    assert(a_inv == Integer(53494466));
+    if (!returned || a_inv != Integer(53494466)) {
+        cerr << "ERROR: multiplikatives Inverses von 562312 modulo 57913313: "
+             << a_inv << ", Erwartet: 53494466" << endl;
+    }
 }
 
 void modexpExercise() {
@@ -85,11 +99,15 @@ void modexpExercise() {
 	// Berechnet 2^100000 % 23 und überprüft ob das Ergebnis gleich 12 ist.
 	Integer ergebnis = pb.modularExponentation(Integer(2), Integer(100000), Integer(23));
 	cout << "2^100000 % 23 = " << ergebnis << endl;
-	assert(ergebnis == Integer(12));
+	if (ergebnis != Integer(12)) {
+        cerr << "ERROR: 2^100000 % 23 = " << ergebnis << ", Erwartet: 12" << endl;
+	}
     // Berechnet 2343947997^765 % 111 und überprüft ob das Ergebnis gleich 105 ist.
     ergebnis = pb.modularExponentation(Integer(2343947997), Integer(765), Integer(111));
     cout << "2343947997^765 % 111 = " << ergebnis << endl;
-	assert(ergebnis == Integer(105));
+    if (ergebnis != Integer(105)) {
+        cerr << "ERROR: 2343947997^765 % 111 = " << ergebnis << ", Erwartet: 105" << endl;
+    }
 }
 
 void randExercise() {
@@ -158,22 +176,35 @@ void millerRabinExercise() {
 	bool ergebnis = pb.millerRabinTest(a, 100);
 	cout << "279226292160650115722581212551219487007 ist laut Rabin Miller Test " << (ergebnis ? "Prim" : "nicht Prim") << endl;
 	// Es wird erwartet, dass a eine Primzahl ist.
-	assert(pb.millerRabinTest(a, 100));
+	Integer returned = pb.millerRabinTest(a, 100);
+	if (!returned) {
+	    cerr << "Es wurde erwartet, dass " << a << " eine Primzahl ist. Mit "
+	         << "Fehlerwahrscheinlichkeit 2^-100 wurde sie aber nicht als "
+	         << "Primzahl erkannt." << endl;
+	}
 	Integer b = Integer("247278711133334795867191516244139839983");
     ergebnis = pb.millerRabinTest(b, 100);
     cout << "247278711133334795867191516244139839983 ist laut Rabin Miller Test " << (ergebnis ? "Prim" : "nicht Prim") << endl;
-    // Es wird erwartet, dass a keine Primzahl ist.
-    assert(!ergebnis);
+    // Es wird erwartet, dass b keine Primzahl ist.
+    if (ergebnis) {
+        cerr << "Es wurde erwartet, dass " << b << " keine Primzahl ist." << endl;
+    }
     Integer c = Integer("192172622525902080249109244057747132167");
     ergebnis = pb.millerRabinTest(c, 100);
     cout << "192172622525902080249109244057747132167 ist laut Rabin Miller Test " << (ergebnis ? "Prim" : "nicht Prim") << endl;
-    // Es wird erwartet, dass a keine Primzahl ist.
-    assert(!ergebnis);
+    // Es wird erwartet, dass c keine Primzahl ist.
+    if (ergebnis) {
+        cerr << "Es wurde erwartet, dass " << c << " keine Primzahl ist." << endl;
+    }
     Integer d = Integer("177387942943728133030691912202779547031");
     ergebnis = pb.millerRabinTest(d, 100);
     cout << "177387942943728133030691912202779547031 ist laut Rabin Miller Test " << (ergebnis ? "Prim" : "nicht Prim") << endl;
-    // Es wird erwartet, dass a eine Primzahl ist.
-    assert(ergebnis);
+    // Es wird erwartet, dass d eine Primzahl ist.
+    if (!ergebnis) {
+        cerr << "Es wurde erwartet, dass " << d << " eine Primzahl ist. Mit "
+             << "Fehlerwahrscheinlichkeit 2^-100 wurde sie aber nicht als "
+             << "Primzahl erkannt." << endl;
+    }
 }
 
 int main(int argc, char** argv) {

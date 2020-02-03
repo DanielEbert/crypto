@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/primes.dir/primes-main.cpp.o CMakeFiles/primes.dir/FortunaGenerator.cpp.o CMakeFiles/primes.dir/MillerRabinTest.cpp.o CMakeFiles/primes.dir/__/Praktikum-CryptoPP/PRNG.cpp.o  -o ../bin/primes /usr/lib/x86_64-linux-gnu/libcryptopp.so 

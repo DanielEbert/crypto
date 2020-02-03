@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/encoder.dir/encoder.cpp.o CMakeFiles/encoder.dir/MessageEncoder.cpp.o  -o ../bin/encoder /usr/lib/x86_64-linux-gnu/libcryptopp.so 

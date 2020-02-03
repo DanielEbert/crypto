@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/dhprotocol.dir/dhprotocol-main.cpp.o CMakeFiles/dhprotocol.dir/MessageEncoder.cpp.o CMakeFiles/dhprotocol.dir/DHProtocol.cpp.o CMakeFiles/dhprotocol.dir/__/Praktikum-CryptoPP/PRNG.cpp.o CMakeFiles/dhprotocol.dir/__/Praktikum-Primzahlen/FortunaGenerator.cpp.o  -o ../bin/dhprotocol /usr/lib/x86_64-linux-gnu/libcryptopp.so 

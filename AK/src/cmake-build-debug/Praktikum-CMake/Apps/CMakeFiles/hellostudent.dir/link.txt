@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/hellostudent.dir/hellostudent-main.cpp.o CMakeFiles/hellostudent.dir/Greetings.cpp.o  -o ../../bin/hellostudent 

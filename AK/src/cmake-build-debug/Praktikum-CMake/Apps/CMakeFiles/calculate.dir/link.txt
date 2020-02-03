@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/calculate.dir/calculate.cpp.o  -o ../../bin/calculate ../Lib/libfunctions.a 

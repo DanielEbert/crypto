@@ -31,13 +31,24 @@ void rsaParameters() {
 	pb.generateRSAParams(p, q, e, d, 256, 30);
 	// e ∈ {1, 2, . . . , ϕ(n) − 1} muss wahr sein.
 	Integer phiN = (p-1)*(q-1);
-	assert(e >= 1 && e <= phiN-1);
+	if (e < 1 || e > phiN-1) {
+	    cerr << "ERROR: e ∈ {1, 2, . . . , ϕ(n) − 1} ist nicht wahr."
+             << " e for RSA Key out of Range" << endl;
+	}
 	// e und ϕ(n) müssen teilerfremd sein
-	assert(Integer::Gcd(e, phiN) == 1);
+	if (Integer::Gcd(e, phiN) != 1) {
+	    cerr << "ERROR: e und ϕ(n) sind nicht teilerfremd. Es wurde erwartet,"
+             << " dass diese teilerfremd sind." << endl;
+	}
 	// d = e^−1 mod ϕ(n) muss wahr sein.
     pb.multInverse(e, phiN, d);
-	assert((e * d) % phiN == 1);
+	if ((e * d) % phiN != 1) {
+	    cerr << "d = e^−1 mod ϕ(n) ist nicht wahr. Es wurde erwartet,"
+             << "dass dies jedoch wahr ist." << endl;
+	}
+	cout << "Ausgabe der RSA Parameter: " << endl;
     cout << "p: " << p << " q: " << q << " e: " << e << " d: " << d << endl;
+    cout << "-------------" << endl;
 }
 
 // #rsaDemo()
@@ -63,11 +74,20 @@ void rsaDemo() {
 
     // Die gleichen Checks aus der rsaParameters Funktion von oben.
     Integer phiN = (p-1)*(q-1);
-    assert(e >= 1 && e <= phiN-1);
-    assert(Integer::Gcd(e, phiN) == 1);
+    if (e < 1 || e > phiN-1) {
+        cerr << "ERROR: e ∈ {1, 2, . . . , ϕ(n) − 1} ist nicht wahr."
+             << " e for RSA Key out of Range" << endl;
+    }
+    if (Integer::Gcd(e, phiN) != 1) {
+        cerr << "ERROR: e und ϕ(n) sind nicht teilerfremd. Es wurde erwartet,"
+             << " dass diese teilerfremd sind." << endl;
+    }
     PublicKeyAlgorithmBox pb;
     pb.multInverse(e, phiN, d);
-    assert((e * d) % phiN == 1);
+    if ((e * d) % phiN != 1) {
+        cerr << "d = e^−1 mod ϕ(n) ist nicht wahr. Es wurde erwartet,"
+             << "dass dies jedoch wahr ist." << endl;
+    }
 
     // RSAEncryptor bietet Methoden an, um eine Zahl mit dem RSA Kryptosystem
     // zu verschlüsseln.
@@ -79,7 +99,11 @@ void rsaDemo() {
     // Es wird erwartet, dass x mit dem obigen Schlüssel zu y verschlüsselt
     // wird.
     cout << "RSA Verschlüsselung: " << x << " > " << outy << endl;
-    assert(outy == y);
+    if (outy != y) {
+        cerr << "ERROR: Es wurde erwartet, dass " << x << " zu " << y
+             << "verschlüsselt wird. Allerdings wurde zu " << outy
+             << "verschlüsselt." << endl;
+    }
 
     // RSADecryptor bietet Methoden an, um eine Zahl mit dem RSA Kryptosystem
     // zu entschlüsseln. Es wird erwartet, dass alle drei Methoden die
@@ -89,15 +113,27 @@ void rsaDemo() {
     Integer outx, outgarner, outcrt;
     rsaDecryptor.compute(outy, outx);
     cout << "RSA Entschlüsselung: " << outy << " --compute--> " << outx << endl;
-    assert(outx == x);
+    if (outx != x) {
+        cerr << "ERROR: Es wurde erwartet, dass " << outy << " zu " << x
+             << "entschlüsselt wird. Allerdings wurde zu " << outx
+             << "entschlüsselt." << endl;
+    }
     // Alternative Entschlüsselung mit dem Chinesischen Restsatz.
     rsaDecryptor.crt(outy, outcrt);
     cout << "RSA Entschlüsselung: " << outy << " --CRT--> " << outcrt << endl;
-    assert(outcrt == x);
+    if (outcrt != x) {
+        cerr << "ERROR: Es wurde erwartet, dass " << outy << " zu " << x
+             << "entschlüsselt wird. Allerdings wurde zu " << outcrt
+             << "entschlüsselt." << endl;
+    }
     rsaDecryptor.garner(outy, outgarner);
     // Alternative Entschlüsselung mit Garners Verfahren.
     cout << "RSA Entschlüsselung: " << outy << " --Garner--> " << outgarner << endl;
-    assert(outgarner == x);
+    if (outgarner != x) {
+        cerr << "ERROR: Es wurde erwartet, dass " << outy << " zu " << x
+             << "entschlüsselt wird. Allerdings wurde zu " << outgarner
+             << "entschlüsselt." << endl;
+    }
 }
 
 //#sqrtExercise()
@@ -113,19 +149,34 @@ void sqrtExercise() {
 	pb.sqrt(Integer("3157242151326374471752634944"), s);
 	cout << "Kleinste nicht negative Quadratwurzel von 3157242151326374471752634944: "
 	     << s << endl;
-	assert(s == Integer("56189341972712"));
+	if (s != Integer("56189341972712")) {
+	    cerr << "Es wurde erwartet, dass die kleinste nicht negative "
+             << "Quadratwurzel von 3157242151326374471752634944 gleich "
+             << "56189341972712 ist. Allerdings wurde " << s << " zurückgeliefert." << endl;
+	}
     // Suche Kleinste nicht negative Quadratwurzel s mit
     // s² = 11175843681943819792704729
     pb.sqrt(Integer("11175843681943819792704729"), s);
     cout << "Kleinste nicht negative Quadratwurzel von 11175843681943819792704729: "
          << s << endl;
-    assert(s == Integer("3343029117723"));
+    if (s != Integer("3343029117723")) {
+        cerr << "Es wurde erwartet, dass die kleinste nicht negative "
+             << "Quadratwurzel von 11175843681943819792704729 gleich "
+             << "3343029117723 ist. Allerdings wurde " << s << " zurückgeliefert." << endl;
+    }
     // Suche Kleinste nicht negative Quadratwurzel s mit
     // s² = 3343229819990029117723. Es wird erwartet, dass eine solche Zahl s
     // nicht existiert.
-    assert(!pb.sqrt(Integer("3343229819990029117723"), s));
-    cout << "Es wird erwartet, dass es keine Kleinste nicht negative "
-         << "Quadratwurzel von 3343229819990029117723 gibt." << endl;
+    Integer returned = pb.sqrt(Integer("3343229819990029117723"), s);
+    if (!returned) {
+        cout << "Es wird erwartet, dass es keine Kleinste nicht negative "
+             << "Quadratwurzel von 3343229819990029117723 gibt." << endl;
+    } else {
+        cerr << "Es wurde erwartet, dass es keine Kleinste nicht negative "
+             << "Quadratwurzel von 3343229819990029117723 gibt. Allerdings "
+             << "wurde zurückgegeben, dass es eine gibt und dass diese "
+             << s << " ist." << endl;
+    }
 }
 
 // #factorizingAttack()
@@ -145,7 +196,11 @@ void factorizingAttack() {
                          p, q);
     // Es wird erwartet, dass n erfolgreich faktorisiert werden konnte.
     cout << "Faktoren von n: " << p << " " << q << endl;
-    assert(p * q == Integer("127869459623070904125109742803085324131"));
+    // 127869459623070904125109742803085324131 ist n
+    if (p * q != Integer("127869459623070904125109742803085324131")) {
+        cerr << "ERROR: rsaAttack liefert die Faktoren " << p << " und " << q
+             << " als Faktoren von n zurück. Allerdings ist p * q nicht n." << endl;
+    }
 }
 
 // #euklidExercise()
@@ -161,7 +216,10 @@ void euklidExercise() {
     // eukild() liefert gcd(39,112) zurück, es wird erwartet dass dieser 1 ist,
     // also 39 und 112 teilerfremd sind.
     cout << "gcd(39, 112) = " << d << endl;
-    assert(d == 1);
+    if (d != 1) {
+        cerr << "Es wurde erwartet, dass 39 und 112 teilerfremd sind. "
+             << "Allerdings liefert euklid " << d << " zurück." << endl;
+    }
     vector<Integer> expectedResult = {Integer("0"), Integer("2"), Integer("1"),
                                    Integer("6"), Integer("1"), Integer("4")};
     cout << "q1 bis qm des Kettenbruchs 39/112: " << endl;
@@ -171,7 +229,10 @@ void euklidExercise() {
     cout << endl;
     // Überprüfen, ob die Werte q1 bis qm in q mit den erwarteten Werten
     // übereinstimmen.
-    assert(q == expectedResult);
+    if (q != expectedResult) {
+        cerr << "Der berechnete Kettenbruch von 39/112 stimmt nicht mit dem "
+             << "erwarteten Ergebnis überein." << endl;
+    }
 }
 
 // #convergentsExercise()
@@ -198,8 +259,10 @@ void convergentsExercise() {
         cout << i << ' ';
     }
     cout << endl;
-    assert(c == expectedC);
-    assert(d == expectedD);
+    if (c != expectedC || d != expectedD) {
+        cerr << "Die berechneten Konvergenten von 39/112 stimmen nicht mit dem "
+             << "erwarteten Ergebnis überein." << endl;
+    }
 }
 
 // #wienerAttack()
@@ -223,7 +286,10 @@ void wienerAttack() {
 	// Es wird erwartet, dass die wienerAttack erfolgreich war und die Faktoren
 	// von n korrekt von wienerAttack gesetzt wurden.
 	cout << "Wiener Attack: Faktoren von n: " << p << ' ' << q << endl;
-	assert(p * q == n);
+    if (p * q != n) {
+        cerr << "ERROR: Wiener Attack liefert die Faktoren " << p << " und " << q
+             << " als Faktoren von n zurück. Allerdings ist p * q nicht n." << endl;
+    }
 }
 
 // #oracleExercise()
@@ -249,22 +315,38 @@ void oracleExercise() {
     cout << "Half Funktion auf 116415012259126332853105614449093205668 liefert " << result << endl;
     // Es wird erwartet, dass das höchstwertigste Bit von
     // 116415012259126332853105614449093205668 entschlüsselt 1 ist.
-	assert(result);
+	if (!result) {
+	    cerr << "ERROR: Es wurde erwartet, dass das höchstwertigste Bit von "
+             << "116415012259126332853105614449093205668 entschlüsselt 1 ist. "
+             << "Allerdings wurde 0 zurückgeliefert." << endl;
+	}
 	result = rsaOracle.half(Integer("74304303162215663057995326922844871006"));
 	cout << "Half Funktion auf 74304303162215663057995326922844871006 liefert " << result << endl;
     // Es wird erwartet, dass das höchstwertigste Bit von
     // 74304303162215663057995326922844871006 entschlüsselt 0 ist.
-    assert(!result);
+    if (result) {
+        cerr << "ERROR: Es wurde erwartet, dass das höchstwertigste Bit von "
+             << "74304303162215663057995326922844871006 entschlüsselt 0 ist. "
+             << "Allerdings wurde 1 zurückgeliefert." << endl;
+    }
     result = rsaOracle.half(Integer("102949691974634609941445904667722882083"));
     cout << "Half Funktion auf 102949691974634609941445904667722882083 liefert " << result << endl;
     // Es wird erwartet, dass das höchstwertigste Bit von
     // 102949691974634609941445904667722882083 entschlüsselt 0 ist.
-    assert(!result);
+    if (result) {
+        cerr << "ERROR: Es wurde erwartet, dass das höchstwertigste Bit von "
+             << "102949691974634609941445904667722882083 entschlüsselt 0 ist. "
+             << "Allerdings wurde 1 zurückgeliefert." << endl;
+    }
     result = rsaOracle.half(Integer("42549620926959222864355800078420537413"));
     cout << "Half Funktion auf 42549620926959222864355800078420537413 liefert " << result << endl;
     // Es wird erwartet, dass das höchstwertigste Bit von
     // 42549620926959222864355800078420537413 entschlüsselt 1 ist.
-    assert(result);
+    if (!result) {
+        cerr << "ERROR: Es wurde erwartet, dass das höchstwertigste Bit von "
+             << "42549620926959222864355800078420537413 entschlüsselt 1 ist. "
+             << "Allerdings wurde 0 zurückgeliefert." << endl;
+    }
 }
 
 // #halfAttack()
@@ -305,7 +387,11 @@ void halfAttack() {
     cout << "Decrypted Message: " << result << endl;
     // Wenn halfAttack erfolgreich war, dann sind beide entschlüsselten
     // Zahlen gleich.
-    assert(y == result);
+    if (y != result) {
+        cerr << "ERROR: halfAttack liefert " << result << " als "
+             << "entschlüsselten Text zurück. Allerdings wurde " << y
+             << "erwartet." << endl;
+    }
 }
 
 // #main()

@@ -67,7 +67,12 @@ Integer PublicKeyAlgorithmBox::modularExponentation(const Integer& a,
     // überprüft werden, ob die implementierung des Algorithmus korrekt
     // implementiert ist. Dieser Check kann für bessere Performance entfernt
     // werden.
-    assert(d == a_exp_b_mod_c(a, b, n));
+    Integer ergebnisMitNBTheory = a_exp_b_mod_c(a, b, n);
+    if (d != ergebnisMitNBTheory) {
+        cerr << "ERROR: Die Berechnung " << a << " ^ " << b << " % " << n
+             << " liefert " << d << " zurück. Allerdings wurde "
+             << ergebnisMitNBTheory << " erwartet." << endl;
+    }
 
     return d;
 } // modularExponentation()

@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/polybius-test.dir/polybius-test.cpp.o CMakeFiles/polybius-test.dir/PolybiusCipher.cpp.o CMakeFiles/polybius-test.dir/Toolbox.cpp.o  -o ../../bin/polybius-test 
