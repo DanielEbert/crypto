@@ -27,14 +27,18 @@ public:
 	virtual ~RSAAttack();
 
 	/***
-	 * factorizeN berechnet die Faktoren p und q von n anhand von ϕ(n). Das
+	 * factorizeN berechnet die beiden Primfaktoren p und q von n anhand von ϕ(n). Das
 	 * bedeutet, dass wenn ϕ(n) bekannt ist, n gebrochen werden kann. n ist
 	 * Teil des öffentlichen Schlüssels.
-	 * Für die Attacke muss n und ϕ(n) von n bekannt sein.
-     * (1) n = p * q und (2) ϕ(n) = (p-1) * (q-1).
-     * Mit p und q kann RSA gebrochen werden, also es können verschlüsselte
+	 * Für diese Attacke muss n und ϕ(n) bekannt sein, mit
+     * (1) n = p * q und (2) ϕ(n) = (p-1) * (q-1). ϕ(n) kann durch diese Formel
+     * berechnet werden, da n das Produkt zweier Primzahlen ist. Da zwei Primzahlen
+     * auf jeden Fall teilerfremd zueinander sind kann der zahlentheorethische Satz
+     * (Zahlentheorie Vorkurs Satz 8.3) ϕ(p*q) = ϕ(p) * ϕ(q) angewendet werden,
+     * wobei für Primzahlen gilt ϕ(p) = p - 1. 
+     * Mit bekannten p und q kann RSA gebrochen werden, also es können verschlüsselte
      * Nachrichten entschlüsselt werden.
-     * Indem man Gleichung (1) in Gleichung (2) mit p = n / q einsetzt:
+     * Grundlage der Berechnung ist, dass Gleichung (1) in Gleichung (2) mit p = n / q eingesetzt wird:
      * ϕ(n) = (p-1) * (n/q - 1)
      * Diese Gleichung kann in eine Form gebracht werden, um p und q mit der
      * Mitternachtsformel zu berechnen:
@@ -68,7 +72,7 @@ public:
 	* beginnend mit i = 2 folgende beiden Bedingungen überprüft: 1. Ist ϕ(n) = (e*d[i]-1)/c[i] eine
 	* Ganze Zahl 2. Ist n anhand vom errechneten ϕ(n) aus Bedingung 1 faktorisierbar. Dazu wird die
 	* Methode factorizeN() eingesetzt. Treffen beide Bedingungen zu, dann konnten die beiden Primzahlen
-	* p und q errechnet werden. Dieses Vorgehen führt zur faktorisierung von n, da aus den 
+	* p und q errechnet werden. Dieses Vorgehen führt zur Faktorisierung von n, da aus den 
 	* Schlussfolgerungen des zahlentheoretischen Satzes ϕ(n) anhand der Konvergenten des Kettenbruchs 
 	* von e/n berechnet werden kann. Schlagen die beiden Bedingungen für alle Näherungsbrüche fehl, dann war
 	* der Angriff nicht erfolgreich und n konnte nicht faktorisiert werden.
@@ -88,10 +92,10 @@ public:
 	/***
 	* Diese Methode implementiert den theoretischen Angriff Half-Attack auf das RSA-Kryptosystems, mit der es
 	* möglich wäre über den Öffentlichen Schlüssel und einen damit verschlüsselten Ciphertext den zugehörigen
-	* Klartext zu berrechnen. Dieser Angriff wäre durchführbar, wenn die Funktion half(y) effizient berechenbar
+	* Klartext zu berechnen. Dieser Angriff wäre durchführbar, wenn die Funktion half(y) effizient berechenbar
 	* wäre. Sei y = enc(K,x), dann ist half(y) = 0, wenn 0 <= x < n/2 bzw 1, wenn n/2 < x <= n-1. Die Funktion
-	* half(y) müsste also den Wert des höchstwertigen Bits des Klartexts berechnen können. würde eine solche
-	* Funktion existieren, dann könnte der zugehörige Klartext zu einem Ciphertext berechnen werden. Dafür wird 
+	* half(y) müsste also den Wert des höchstwertigen Bits des Klartexts berechnen können. Würde eine solche
+	* Funktion existieren, dann könnte der zugehörige Klartext zu einem Ciphertext berechnet werden. Dafür wird 
 	* sich die Eigenschaft von RSA zunutze gemacht, dass für alle x1, x2 in Zn gilt, dass enc(K,x1*x2) = 
 	* enc(K,x1) * enc(K,x2). Somit gilt auch für alle positiven i, dass enc(K,2^i * x) = enc(K,2^i) * enc(k,x).
 	* Die Half-Attack läuft dann folgendermaßen ab: Zuerst wird mit der half(y)-Funktion das höchstwertigste
