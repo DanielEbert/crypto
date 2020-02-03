@@ -37,8 +37,8 @@ public:
 	/***
 	* Die Methode half() wird zur Durchführung einer Half-Attack auf RSA verwendet. Diese Methode
 	* bekommt einen Geheimtext übergeben und liefert den Wert des höchstwertigen Bits des
-	* entschlüsselten Geheimtext in y zurück. Dabei hat der entschlüsselte Geheimtext die
-	* gleiche Bitlänge wie n, wird also wenn nötig mit Nullen links aufgefüllt/gepadded.
+	* entschlüsselten Geheimtext in y zurück. Dabei wird angenommen, dass der entschlüsselte Geheimtext die
+	* gleiche Bitlänge wie n besitzt. Er wird also wenn nötig links mit Nullen aufgefüllt/gepadded.
 	* Da keine solche Funktion existiert, welche diese
 	* Funktionalität in effizienter Zeit mit dem öffentlichen Schlüssel berechnet, besitzt das Orakel
 	* in dieser Implementierung Wissen über den privaten Teil des RSA-Schlüssels, um den Geheimtext
