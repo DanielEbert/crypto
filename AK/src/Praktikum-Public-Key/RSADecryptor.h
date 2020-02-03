@@ -148,8 +148,8 @@ public:
      * @param y Die zu entschlüsselnde Zahl als Integer. y muss ein Element
      * des Geheimtextraums sein.
      * @param x Wenn entschlüsselt werden kann, dann wird das entschlüsselte
-     * y in x als Integer gespeichert. x wird ein Element des Klartextraums
-     * sein.
+     * y in x als Integer gespeichert. x ist ein Element innerhalb des 
+     * Klartextraums Zn.
      * @return True, wenn entschlüsselt werden konnte, also y < n gilt,
      * False wenn nicht.
      */
