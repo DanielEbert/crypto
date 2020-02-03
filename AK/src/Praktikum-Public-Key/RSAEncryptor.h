@@ -50,7 +50,7 @@ private:
 	Integer e;
 
 public:
-    /***
+    /**
      * Konstruktor der RSAEncryptor Klasse, welche den öffentlichen Teil
      * des Schlüssels, n und e, setzt. Die Übergabeargumente werden den
      * Klassenvariablen n und e zugewiesen.
@@ -69,7 +69,7 @@ public:
 	RSAEncryptor(const Integer& n, const Integer& e);
 	virtual ~RSAEncryptor();
 
-	/***
+	/**
 	 * compute verschlüsselt die Zahl x mit dem RSA Kryptosystem und dem
 	 * öffentlichen Schlüssel n und e. Dabei wird x^e mod n berechnet.
 	 * Das Ergebnis ist das verschlüsselte x, welches im Parameter y

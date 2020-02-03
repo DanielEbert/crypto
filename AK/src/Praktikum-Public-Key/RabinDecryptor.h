@@ -11,7 +11,7 @@
 using namespace CryptoPP;
 using namespace std;
 
-/***
+/**
  * RabinDecryptor stellt Methoden bereit, um eine Zahl in einem Integer
  * mit dem Rabin Kryptosystem zu entschlüsseln. Es gibt zusätzlich die
  * Möglichkeit, über einen mit dem padding endenden verschlüsselten Klartext
@@ -90,7 +90,7 @@ private:
 	Integer offset;
 
 public:
-    /***
+    /**
      * Konstruktor der RabinDecryptor Klasse, welcher die Klassenvariablen
      * p, q, offset, und padding setzt.
      *
@@ -107,7 +107,7 @@ public:
 	RabinDecryptor(const Integer& p, const Integer& q, const Integer& padding=Integer("987654321"));
 	virtual ~RabinDecryptor();
 
-	/***
+	/**
 	 * compute Entschlüsselt den Geheimtext y und speichert die 4 möglichen
 	 * Klartexte im Vektor xv ab. Es wird nicht auf das padding am Ende der
 	 * möglichen Klartexte überprüft. Zu beachten gilt es, dass 4
@@ -134,7 +134,7 @@ public:
 	 * @return True, wenn das Entschlüsseln erfolgreich war, false wenn nicht.
 	 */
 	bool compute(const Integer& y, vector<Integer>& xv);
-    /***
+    /**
      * compute Entschlüsselt den Geheimtext y. Zu beachten gilt es, dass 4
 	 * mögliche Klartexte resultieren werden und diese Methode nicht
 	 * bestimmt, welches der 4 möglichen Klartexte der tatsächliche Klartext
@@ -163,7 +163,7 @@ public:
      */
 	bool compute(const Integer& y, Integer& x);
 
-    /***
+    /**
      * compute2 Entschlüsselt den Geheimtext y. Zu beachten gilt es, dass 4
 	 * mögliche Klartexte aus der Entschlüsselung resultieren.
      * Zur Entschlüsselung muss die Wurzel von y modulo n berechnet werden.

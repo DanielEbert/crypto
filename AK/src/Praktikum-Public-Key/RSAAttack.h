@@ -26,7 +26,7 @@ public:
 	RSAAttack();
 	virtual ~RSAAttack();
 
-	/***
+	/**
 	 * factorizeN berechnet die beiden Primfaktoren p und q von n anhand von ϕ(n). Das
 	 * bedeutet, dass wenn ϕ(n) bekannt ist, n gebrochen werden kann. n ist
 	 * Teil des öffentlichen Schlüssels.
@@ -55,7 +55,7 @@ public:
 	 */
 	bool factorizeN(const Integer& n, const Integer& phi_n, Integer& p, Integer& q) const;
 
-	/***
+	/**
 	* Diese Methode implementiert die Wiener-Attacke von Michael J. Wiener, mit der das n
 	* eines RSA-Schlüssels faktorisiert werden kann, wenn dessen Parameter ungünstig gewählt
 	* sind. Dieser Angriff basiert auf endlichen Kettenbrüchen und einem zahlentheoretischen
@@ -89,7 +89,7 @@ public:
 	*/
 	bool wienerAttack(const Integer& n, const Integer& e, Integer& p, Integer& q) const;
 
-	/***
+	/**
 	* Diese Methode implementiert den theoretischen Angriff Half-Attack auf das RSA-Kryptosystems, mit der es
 	* möglich wäre über den Öffentlichen Schlüssel und einen damit verschlüsselten Ciphertext den zugehörigen
 	* Klartext zu berechnen. Dieser Angriff wäre durchführbar, wenn die Funktion half(y) effizient berechenbar
@@ -111,7 +111,9 @@ public:
 	*
 	* @param n Die Integer-Variable n entspricht dem Parameter n des öffentlichen Teils des RSA-Schlüssels
 	* @param e Die Integer-Variable e entspricht dem Parameter e des öffentlichen Teils des RSA-Schlüssels
-	* @param rsa_oracle Zeiger auf ein Objekt der Klasse RSAOracle, dass half(y) berechnen kann
+	* @param y Die zu entschlüsselnde Zahl y als Integer.. y muss ein Element des Geheimtextraums sein.
+	* Das entschlüsselte y wird als Integer von dieser Methode zurückgegeben.
+	* @param rsa_oracle Zeiger auf ein Objekt der Klasse RSAOracle, welches half(y) berechnen kann
 	*
 	* @return Die Methode gibt den Klartext x zurück, sodass y = x^e (mod n). Die Vorraussetzung hierfür ist
 	* jedoch, dass rsa_oracle das richtige Ergebnis auf half(y) liefert.

@@ -10,7 +10,7 @@
 
 using namespace CryptoPP;
 
-/***
+/**
  * Das Rabin-System ist anfällig gegen eine Attacke mit frei wählbarem
  * Geheimtext.
  * Die Klasse RabinAttack bietet eine Methode an, mit der das Rabin
@@ -23,7 +23,7 @@ public:
 	RabinAttack();
 	virtual ~RabinAttack();
 
-	/***
+	/**
 	 * Das Rabin-System ist anfällig gegen eine Attacke mit frei
      * wählbarem Geheimtext. Anfällig bedeutet, dass ohne Kenntniss von p und q
      * und nur durch Kenntniss von n ein p oder q bestimmt werden kann. Mit

@@ -9,7 +9,7 @@
 
 using namespace CryptoPP;
 
-/***
+/**
  * RabinEncryptor stellt Methoden bereit, um eine Zahl in einem Integer
  * mit dem Rabin Kryptosystem zu verschlüsseln. Das Rabin-Kryptosystem wurde im Jahre
  * 1979 von Michael O. Rabin entwicket. In dieser Implementierung gibt es zusätzlich die
@@ -76,7 +76,7 @@ private:
 	Integer padding;
 
 public:
-    /***
+    /**
      * Konstruktor der RabinEncryptor Klasse, welcher die Klassenvariablen
      * n, offset, und padding setzt.
      *
@@ -90,7 +90,7 @@ public:
 	RabinEncryptor(const Integer& n, const Integer& padding=Integer("987654321"));
 	virtual ~RabinEncryptor();
 
-	/***
+	/**
 	 * compute verschlüsselt die Zahl im Parameter x mit dem Rabin Kryptosystem
 	 * und speichert die verschlüsselte Zahl ohne padding/Markierung in y ab.
 	 * Bei der Verschlüsselung mit dem Rabin-Kryptosystem wird der Geheimtext
@@ -107,7 +107,7 @@ public:
 	 */
 	bool compute(const Integer& x, Integer& y);
 
-    /***
+    /**
      * compute2 verschlüsselt die Zahl in x mit dem Rabin-Kryptosystem und
      * speichert die verschlüsselte Zahl mit padding/Markierung in y ab.
      * Markiert bedeutet, dass das padding an das Ende der zu verschlüsselnden

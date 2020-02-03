@@ -130,7 +130,7 @@ Integer RSAAttack::halfAttack(const Integer& n, const Integer& e, const Integer&
     Integer lo = 0;
     Integer hi = n;
     //Multipliziere den Wert von hi l mal mit 10, damit dieser Größer wird und auf
-    //diese Weise keine ungeauigkeiten bei der Binären Suche auftreten
+    //diese Weise keine ungenauigkeiten bei der Binären Suche auftreten
     for (int i = 0; i < l; i++) hi *= 10;
 
     //Führe eine Binäre Suche anhand der in der obigen For-Schleife berechneten Bits durch

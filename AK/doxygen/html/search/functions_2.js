@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['decrypt',['decrypt',['../classAESCipher.html#a51736a7005168423ddee6c07ea3b59a7',1,'AESCipher']]],
-  ['decryptblock',['decryptBlock',['../classAESCipher.html#af0503d3a0ce1090ddb8d0a4ef7ebbe0b',1,'AESCipher']]]
+  ['factorize',['factorize',['../classRabinAttack.html#a16c2c098ad1cba7b3c39a33b21b5637b',1,'RabinAttack']]],
+  ['factorizen',['factorizeN',['../classRSAAttack.html#ada0e9e97d7b84a5f7e0ce3e912f1eadb',1,'RSAAttack']]]
 ];

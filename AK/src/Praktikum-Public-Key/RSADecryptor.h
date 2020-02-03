@@ -61,7 +61,7 @@ private:
 	Integer n;
 
 public:
-    /***
+    /**
      * Konstruktor der RSADecryptor Klasse, welche den privaten Teil
      * des Schlüssels, p, q und d setzt. Die Übergabeargumente werden den
      * Klassenvariablen p, q und d zugewiesen. Das n wird ebenfalls gemäß 
@@ -81,7 +81,7 @@ public:
 	RSADecryptor(const Integer& p, const Integer& q, const Integer& d);
 	virtual ~RSADecryptor();
 
-	/***
+	/**
 	 * compute entschlüsselt den Integer y mit dem n des öffentlichen Schlüssels und
 	 * dem Privaten Teil d. Bei dieser Implementation der Entschlüsselung
 	 * wird die zu entschlüsselnde Zahl y mit y^d mod n entschlüsselt.
@@ -109,7 +109,7 @@ public:
 	 */
 	bool compute(const Integer& y, Integer& x) const;
 
-    /***
+    /**
      * compute entschlüsselt den Integer y mit dem Öffentlichen Teil n und
      * dem Privaten Teil d. Bei der Implementierung der Entschlüsselung in
      * dieser Methode wird die zu entschlüsselnde Zahl y mit dem Chinesischen Restsatz
@@ -136,7 +136,7 @@ public:
      */
 	bool crt(const Integer& y, Integer& x) const;
 
-    /***
+    /**
      * compute entschlüsselt den Integer y mit dem Öffentlichen Teil n und
      * dem Privaten Teil d. Bei der Implementierung der Entschlüsselung in dieser
      * Methode wird die zu entschlüsselnde Zahl y mit Garners Verfahren

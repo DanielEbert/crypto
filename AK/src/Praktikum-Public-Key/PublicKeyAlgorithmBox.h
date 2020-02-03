@@ -14,7 +14,7 @@ using namespace CryptoPP;
  */
 class PublicKeyAlgorithmBox {
 public:
-	/***
+	/**
 	* In der Methode computeConvergents werden die Konvergenten des Kettenbruchs 
 	* von a/b berechnet. Die Konvergenten eines Kettenbruchs können auch als 
 	* Näherungsbruch bezeichnet werden. Sei [q1,...,qm] ein Kettenbruch. Für alle
@@ -36,7 +36,7 @@ public:
 	unsigned int computeConvergents(const Integer& a, const Integer& b,
 			vector<Integer>& c, vector<Integer>& d);
 
-	/***
+	/**
 	 * Die Methode euklid berechnet den endlichen Kettenbruch a/b mit Hilfe des 
 	 * euklidschen Algorithmus. Ein endlicher Kettenbruch ist ein Term, der
 	 * durch q1 + (1/(q2 + (1/(q3 + ... + (1(qm))))) dargestellt werden kann,
@@ -173,7 +173,7 @@ public:
      */
 	bool millerRabinTest(Integer& n, unsigned int s);
 
-	/***
+	/**
 	 * randomInteger liefert einen zufälligen Integer
 	 * im Bereich 0,1,...,n-1 zurück.
 	 *
@@ -184,7 +184,7 @@ public:
 	 */
 	Integer randomInteger(const Integer& n);
 
-	/***
+	/**
 	 * randomPrime generiert eine Zahl, die mit Wahrscheinlichkeit 1-2^-s eine Primzahl ist
 	 * und speichert diese Zahl im Parameter p ab. Die generierte Zahl hat ebenfalls eine
 	 * maximale Größe in Binardarstellung von bitlen Ziffern/Bits. Die generierte Zahl wird
@@ -245,7 +245,7 @@ public:
 	 */
 	bool modPrimeSqrt(const Integer& y, const Integer& p, vector<Integer>& v);
 
-	/***
+	/**
 	 * sqrt versucht die kleinste nicht-negativen ganzzahligen Quadratwurzel s
 	 * von x zu berechnen. Wird diese gefunden, dann wird true zurückgegeben.
 	 * Andernfalls wird false zurückgegeben. Der Algorithmus sucht in
@@ -260,7 +260,7 @@ public:
 	 */
 	bool sqrt(const Integer& x, Integer& s) const;
 
-	/***
+	/**
 	 * generateRSAParams generiert Werte für einen RSA-Schlüssel. Speziell
 	 * besteht der RSA Schlüssel K aus n, p, q, e, d. n ist das Produkt
 	 * aus den Primzahlen p * q und kann somit ebenfalls aus den Werten p und q berechnet
