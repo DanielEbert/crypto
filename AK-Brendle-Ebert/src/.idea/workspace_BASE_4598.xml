@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="AngewandteKryptographie" targetName="aestests" />
+      <config projectName="AngewandteKryptographie" targetName="functions" />
+      <config projectName="AngewandteKryptographie" targetName="coindex" />
+      <config projectName="AngewandteKryptographie" targetName="vigenere" />
+      <config projectName="AngewandteKryptographie" targetName="polybius" />
+      <config projectName="AngewandteKryptographie" targetName="primes" />
+      <config projectName="AngewandteKryptographie" targetName="dhprotocol" />
+      <config projectName="AngewandteKryptographie" targetName="desAufgabe_10_b" />
+      <config projectName="AngewandteKryptographie" targetName="helloworld" />
+      <config projectName="AngewandteKryptographie" targetName="searchshift" />
+      <config projectName="AngewandteKryptographie" targetName="encoder" />
+      <config projectName="AngewandteKryptographie" targetName="hellostudent" />
+      <config projectName="AngewandteKryptographie" targetName="calculate" />
+      <config projectName="AngewandteKryptographie" targetName="netintro" />
+      <config projectName="AngewandteKryptographie" targetName="cryptopp-intro" />
+      <config projectName="AngewandteKryptographie" targetName="des" />
+      <config projectName="AngewandteKryptographie" targetName="kasiski" />
+      <config projectName="AngewandteKryptographie" targetName="aes" />
+      <config projectName="AngewandteKryptographie" targetName="polybius-test" />
+      <config projectName="AngewandteKryptographie" targetName="desAufgabe3" />
+    </generated>
+  </component>
+  <component name="CMakeSettings" AUTO_RELOAD="true">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" GENERATION_DIR="$PROJECT_DIR$/../build" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="03877d79-aa4f-4875-a788-6f1bc6e771ef" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Praktikum-DH-Protokoll/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Praktikum-DH-Protokoll/DHProtocol.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Praktikum-DH-Protokoll/DHProtocol.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Praktikum-DH-Protokoll/encoder.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Praktikum-DH-Protokoll/encoder.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Praktikum-DH-Protokoll/netintro.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Praktikum-DH-Protokoll/netintro.cpp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
+  <component name="ProjectId" id="1SvoHZtz10dqa4HhSjiQrpDKxTX" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.advertisement.text.overridden" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../BrendleCrypto/angewandte-kryptographie/AK/src" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C/C++" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Praktikum-CryptoPP" />
+    </key>
+  </component>
+  <component name="RunManager" selected="CMake Application.dhprotocol">
+    <configuration name="aes" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AngewandteKryptographie" TARGET_NAME="aes" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="AngewandteKryptographie" RUN_TARGET_NAME="aes">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="aestests" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AngewandteKryptographie" TARGET_NAME="aestests" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="AngewandteKryptographie" RUN_TARGET_NAME="aestests">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="calculate" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AngewandteKryptographie" TARGET_NAME="calculate" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="AngewandteKryptographie" RUN_TARGET_NAME="calculate">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="coindex" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AngewandteKryptographie" TARGET_NAME="coindex" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="AngewandteKryptographie" RUN_TARGET_NAME="coindex">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="cryptopp-intro" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AngewandteKryptographie" TARGET_NAME="cryptopp-intro" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="AngewandteKryptographie" RUN_TARGET_NAME="cryptopp-intro">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="des" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AngewandteKryptographie" TARGET_NAME="des" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="AngewandteKryptographie" RUN_TARGET_NAME="des">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="desAufgabe3" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AngewandteKryptographie" TARGET_NAME="desAufgabe3" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="AngewandteKryptographie" RUN_TARGET_NAME="desAufgabe3">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="desAufgabe_10_b" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AngewandteKryptographie" TARGET_NAME="desAufgabe_10_b" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="AngewandteKryptographie" RUN_TARGET_NAME="desAufgabe_10_b">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="dhprotocol" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AngewandteKryptographie" TARGET_NAME="dhprotocol" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="AngewandteKryptographie" RUN_TARGET_NAME="dhprotocol">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="encoder" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AngewandteKryptographie" TARGET_NAME="encoder" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="AngewandteKryptographie" RUN_TARGET_NAME="encoder">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="functions" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AngewandteKryptographie" TARGET_NAME="functions" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="hellostudent" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AngewandteKryptographie" TARGET_NAME="hellostudent" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="AngewandteKryptographie" RUN_TARGET_NAME="hellostudent">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="helloworld" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AngewandteKryptographie" TARGET_NAME="helloworld" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="AngewandteKryptographie" RUN_TARGET_NAME="helloworld">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="kasiski" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AngewandteKryptographie" TARGET_NAME="kasiski" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="AngewandteKryptographie" RUN_TARGET_NAME="kasiski">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="netintro" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AngewandteKryptographie" TARGET_NAME="netintro" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="AngewandteKryptographie" RUN_TARGET_NAME="netintro">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="polybius-test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AngewandteKryptographie" TARGET_NAME="polybius-test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="AngewandteKryptographie" RUN_TARGET_NAME="polybius-test">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="polybius" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AngewandteKryptographie" TARGET_NAME="polybius" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="AngewandteKryptographie" RUN_TARGET_NAME="polybius">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="primes" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AngewandteKryptographie" TARGET_NAME="primes" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="AngewandteKryptographie" RUN_TARGET_NAME="primes">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="searchshift" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AngewandteKryptographie" TARGET_NAME="searchshift" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="AngewandteKryptographie" RUN_TARGET_NAME="searchshift">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="vigenere" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AngewandteKryptographie" TARGET_NAME="vigenere" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="AngewandteKryptographie" RUN_TARGET_NAME="vigenere">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.aes" />
+      <item itemvalue="CMake Application.aestests" />
+      <item itemvalue="CMake Application.calculate" />
+      <item itemvalue="CMake Application.coindex" />
+      <item itemvalue="CMake Application.cryptopp-intro" />
+      <item itemvalue="CMake Application.desAufgabe3" />
+      <item itemvalue="CMake Application.desAufgabe_10_b" />
+      <item itemvalue="CMake Application.dhprotocol" />
+      <item itemvalue="CMake Application.encoder" />
+      <item itemvalue="CMake Application.netintro" />
+      <item itemvalue="CMake Application.des" />
+      <item itemvalue="CMake Application.functions" />
+      <item itemvalue="CMake Application.hellostudent" />
+      <item itemvalue="CMake Application.helloworld" />
+      <item itemvalue="CMake Application.kasiski" />
+      <item itemvalue="CMake Application.polybius-test" />
+      <item itemvalue="CMake Application.polybius" />
+      <item itemvalue="CMake Application.primes" />
+      <item itemvalue="CMake Application.searchshift" />
+      <item itemvalue="CMake Application.vigenere" />
+    </list>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="03877d79-aa4f-4875-a788-6f1bc6e771ef" name="Default Changelist" comment="" />
+      <created>1572453342368</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1572453342368</updated>
+      <workItem from="1572453345425" duration="10953000" />
+      <workItem from="1572522647340" duration="13778000" />
+      <workItem from="1572540331962" duration="5502000" />
+      <workItem from="1572641317204" duration="354000" />
+      <workItem from="1573126015143" duration="5968000" />
+      <workItem from="1574523762388" duration="20216000" />
+      <workItem from="1575469366371" duration="14532000" />
+      <workItem from="1575502454972" duration="48000" />
+      <workItem from="1575502512652" duration="4012000" />
+      <workItem from="1575719597737" duration="7608000" />
+      <workItem from="1575989580935" duration="9577000" />
+      <workItem from="1577882575242" duration="6662000" />
+      <workItem from="1578828962099" duration="41936000" />
+      <workItem from="1578926942766" duration="15569000" />
+      <workItem from="1578952293066" duration="3784000" />
+      <workItem from="1579009246666" duration="8489000" />
+      <workItem from="1579088743780" duration="2976000" />
+      <workItem from="1579443047073" duration="9419000" />
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="4131" y="722" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579444256836">
+      <screen x="3840" y="360" width="3440" height="1440" />
+    </state>
+    <state x="4131" y="722" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.2124/3840.360.3440.1440/7280.468.1920.1080@3840.360.3440.1440" timestamp="1579444256836" />
+    <state x="4374" y="864" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1575725288884">
+      <screen x="3840" y="360" width="3440" height="1440" />
+    </state>
+    <state x="4374" y="864" key="#com.intellij.fileTypes.FileTypeChooser/3840.360.3440.1440/0.0.3840.2160/7280.540.1920.1080@3840.360.3440.1440" timestamp="1575725288884" />
+    <state x="5336" y="823" width="432" height="484" key="FileChooserDialogImpl" timestamp="1578829633459">
+      <screen x="3840" y="360" width="3440" height="1440" />
+    </state>
+    <state x="5336" y="823" width="432" height="484" key="FileChooserDialogImpl/3840.360.3440.1440/0.0.3840.2160/7280.540.1920.1080@3840.360.3440.1440" timestamp="1578829633459" />
+    <state width="1613" height="392" key="GridCell.Tab.0.bottom" timestamp="1579452469217">
+      <screen x="3840" y="360" width="3440" height="1440" />
+    </state>
+    <state width="1613" height="392" key="GridCell.Tab.0.bottom/0.0.3840.2124/3840.360.3440.1440/7280.468.1920.1080@3840.360.3440.1440" timestamp="1579452469217" />
+    <state width="1617" height="389" key="GridCell.Tab.0.bottom/3840.360.3440.1440/0.0.3840.2160/7280.540.1920.1080@3840.360.3440.1440" timestamp="1579018397515" />
+    <state width="1613" height="392" key="GridCell.Tab.0.center" timestamp="1579452469216">
+      <screen x="3840" y="360" width="3440" height="1440" />
+    </state>
+    <state width="1613" height="392" key="GridCell.Tab.0.center/0.0.3840.2124/3840.360.3440.1440/7280.468.1920.1080@3840.360.3440.1440" timestamp="1579452469216" />
+    <state width="1617" height="389" key="GridCell.Tab.0.center/3840.360.3440.1440/0.0.3840.2160/7280.540.1920.1080@3840.360.3440.1440" timestamp="1579018397515" />
+    <state width="1613" height="392" key="GridCell.Tab.0.left" timestamp="1579452469216">
+      <screen x="3840" y="360" width="3440" height="1440" />
+    </state>
+    <state width="1613" height="392" key="GridCell.Tab.0.left/0.0.3840.2124/3840.360.3440.1440/7280.468.1920.1080@3840.360.3440.1440" timestamp="1579452469216" />
+    <state width="1617" height="389" key="GridCell.Tab.0.left/3840.360.3440.1440/0.0.3840.2160/7280.540.1920.1080@3840.360.3440.1440" timestamp="1579018397514" />
+    <state width="1613" height="392" key="GridCell.Tab.0.right" timestamp="1579452469217">
+      <screen x="3840" y="360" width="3440" height="1440" />
+    </state>
+    <state width="1613" height="392" key="GridCell.Tab.0.right/0.0.3840.2124/3840.360.3440.1440/7280.468.1920.1080@3840.360.3440.1440" timestamp="1579452469217" />
+    <state width="1617" height="389" key="GridCell.Tab.0.right/3840.360.3440.1440/0.0.3840.2160/7280.540.1920.1080@3840.360.3440.1440" timestamp="1579018397515" />
+    <state width="1623" height="481" key="GridCell.Tab.1.bottom" timestamp="1576003340932">
+      <screen x="3840" y="360" width="3440" height="1440" />
+    </state>
+    <state width="1623" height="481" key="GridCell.Tab.1.bottom/3840.360.3440.1440/0.0.3840.2160/7280.540.1920.1080@3840.360.3440.1440" timestamp="1576003340932" />
+    <state width="1623" height="481" key="GridCell.Tab.1.center" timestamp="1576003340932">
+      <screen x="3840" y="360" width="3440" height="1440" />
+    </state>
+    <state width="1623" height="481" key="GridCell.Tab.1.center/3840.360.3440.1440/0.0.3840.2160/7280.540.1920.1080@3840.360.3440.1440" timestamp="1576003340932" />
+    <state width="1623" height="481" key="GridCell.Tab.1.left" timestamp="1576003340931">
+      <screen x="3840" y="360" width="3440" height="1440" />
+    </state>
+    <state width="1623" height="481" key="GridCell.Tab.1.left/3840.360.3440.1440/0.0.3840.2160/7280.540.1920.1080@3840.360.3440.1440" timestamp="1576003340931" />
+    <state width="1623" height="481" key="GridCell.Tab.1.right" timestamp="1576003340932">
+      <screen x="3840" y="360" width="3440" height="1440" />
+    </state>
+    <state width="1623" height="481" key="GridCell.Tab.1.right/3840.360.3440.1440/0.0.3840.2160/7280.540.1920.1080@3840.360.3440.1440" timestamp="1576003340932" />
+    <state x="4542" y="638" key="SettingsEditor" timestamp="1578927489828">
+      <screen x="3840" y="360" width="3440" height="1440" />
+    </state>
+    <state x="4542" y="638" key="SettingsEditor/3840.360.3440.1440/0.0.3840.2160/7280.540.1920.1080@3840.360.3440.1440" timestamp="1578927489828" />
+  </component>
+</project>

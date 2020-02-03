@@ -1,0 +1,19 @@
+Wie heißen die Methoden, die den Teil der Kommunikation von Alice, Bob beziehungsweise Oscar beinhalten werden?
+    Die Methode, die den Kommunikationspart des Clients Alice beinhaltet trägt den Namen alice(). Die Methoden, die den
+    Teil des Servers Bob beinhalten heißen bob() und serverBob(). Zuletzt tragen die Methoden, die die Kommunikation
+    des Man-In-The-Middle Oscar bearbeiten den Namen oscar() und serverOscar().
+
+An welcher Stelle werden die öffentlichen Parameter des Diffie-Hellman Protokolls eingelesen? Wie heißen die
+entsprechenden Variablen?
+    Die öffentlichen Parameter werden im Konstruktor DHProtocol aus einer Datei ausgelesen. Die Datei muss dabei drei
+    mit dem MessageEncoder kodierte Integer enthalten. Der Inhalt der Datei wird ausgelesen und mit dem MessageEncoder
+    dekodiert. Anschließend wird überprüft, ob dieser String erfolgreich dekodiert werden konnte und ob die Anzahl der
+    kodierten Nachrichten gleich 3 ist. Ist dies der Fall, dann werden diese 3 dekodierten Integer der Reihe nach in
+    die Variablen q, p und alpha gespeichert. Für die Datei dhparams.txt im Verzeichnis data sind die Werte für diese
+    drei Variablen q = 81806148871166748278219739744657418700864323044751238735252440850842943302559,
+    p = 163612297742333496556439479489314837401728646089502477470504881701685886605119 und
+    alpha = 108489874461289231857297525592880901125357137987362514962887183145725279218798. Die beiden Variablen q und
+    p müssen für das Diffie-Hellman Protokoll Primzahlen sein. Die Variable alpha hingegen ist ein erzeugendes Element
+    von Z Stern p. Beim Diffie-Hellman Protokoll wird die Primzahl p als eine sichere Primzahl gewählt. Eine sichere
+    Primzahl ist eine Primzahl p, für die gilt p = (2 * q) + 1, wobei q eine Primzahl ist. Eine sichere Primzahl besitzt
+    die Untergruppen: {1}, {1,p-1}, eine Untergruppe mit q Elementen und Z Stern p mit insgesamt 2*q Elementen.

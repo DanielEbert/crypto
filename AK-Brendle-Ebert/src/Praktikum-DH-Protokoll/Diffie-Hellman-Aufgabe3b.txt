@@ -1,0 +1,47 @@
+Welche Klassen der Crypto++-Bibliothek werden verwendet?
+
+    'Socket' included from <socketft.h>
+
+Wie ist der Quellcode des Servers aufgebaut?
+    Der Quellcode für den Server startet in der Funktion serverBob(), die aufgerufen wird, wenn der Anwender als
+    Kommandozeilenparameter den String "Bob" ausgewählt hat. Die Funktion bekommt als Übergabeparameter einen Port als
+    Integer mitgeteilt, auf welchem der Server auf eintreffende Verbindungen lauschen soll. Zuerst wird ein Socket mit
+    dem Namen server erstellt und dieser auf den übergebenen Port gebunden. Anschließend wird dem Socket über die
+    Methode listen() mitgeteilt, dass er auf eingehende Verbindungen warten soll. Anschließend wird in einer
+    Endlosschleife darauf gewartet, dass sich ein Client zum Server verbindet. Der Server akzeptiert diese Verbindung
+    über die Methode accept(), die als Parameter einen weiteren Socket erhält, der anschließend zur Kommunikation mit
+    dem Client verwendet wird. Anschließend ruft er die Methode bob() mit diesem Socket auf, in der die Nachricht von
+    Alice über den Socket empfangen wird und als Antwort der String "Hi Alice. I am fine!" an den Client zurückgegeben
+    wird. Diese Anweisungen befinden sich in einem Try-Catch-Block, sodass ein Fehler abgefangen und eine
+    Fehlermeldung auf dem Bildschirm ausgegeben werden kann.
+
+Welche Befehle sind notwendig um den Server zu starten? In welcher Reihenfolge müssen die Befehle ausgeführt werden?
+    
+    // Create two sockets. socket server is used for listening on port 'port' and accepting new incoming connections
+    // socket client is used for communicating with accepted connections
+    Socket server, client;
+    // To Create the server socket
+    server.Create();
+    // To Bind to the given port
+    server.Bind(port);
+    // To Listen on the port and wait for an incoming connection
+    server.Listen();
+    // To Accept an incoming connection. Also we check if we accepted successfully.
+    if (server.Accept(client) == true) {...
+
+Wie ist der Quellcode des Clients aufgebaut?
+    Der Quellcode für den Client ist in der Funktion alice() implementiert, die als Parameter den Host und den
+    Port übergeben bekommt, unter dem Bob erreichbar ist. In einem Try-Catch-Block, in dem mögliche Socket-Errors
+    abgefangen werden, wird dann ein Socket zu Bob geöffnet und der String "Hello Bob! How are you?" an den Server
+    gesendet. Anschließend wartet der Client auf eine Antwort des Servers, die in ein Byte-Array eingelesen wird.
+    Dieses Byte-Array wird im Anschluss von einem Byte-Array in einen String mit der Methode assign() umgewandelt.
+    Zuletzt wird diese vom Server erhaltenen Nachricht auf dem Bildschirm ausgegeben.
+
+Welche Befehle sind notwendig, um den Client zu starten? In welcher Reihenfolge müssen die Befehle ausgeführt werden?
+
+    // Create the client socket Object
+    Socket client;
+    // Creating a socket ...
+    client.Create();
+    // ... and connecting to the server with the host ip address and port
+    client.Connect(host.c_str(), port);

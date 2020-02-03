@@ -1,0 +1,38 @@
+# Aufgabe 10:
+
+## a) 
+
+Der Block in welchem das Bit enthalten ist verändert sich und sieht so aus,
+als ob der Block neu zufällig erstellt worden wäre. Der Inhalt der anderen 
+Blöcke ändert sich nicht. Das liegt daran, dass der ECB Modus für DES 
+verwendet wurde. Jeder Block wird deshalb unabhängig von einem anderen
+verschlüsselt. Das Ändern eines Bits ändert nur einen Block im Geheimtext.
+
+
+## b) 
+
+Bei Verwendung eines schwachen Schlüssels wird, wie in ./desAufgabe_10_b.cpp 
+bzw. bin/desAufgabe_10_b zu sehen ist, 16 identische Rundenschlüssel generiert.
+Bei der Schlüsselerzeugung ist sicher zu stellen, dass 16 verschiedene 
+Rundenschlüssel generiert werden, da man sonst einfacher entschlüsseln kann,
+ohne den eigentlichen key zu kennen.
+
+Es gibt auch halbschwache Schlüsselpaare, bei denen anstatt 16 verschiedener
+Rundenschlüssel nur 2 verschiedene Rundenschlüssel erzeugt werden. Hier gilt
+wieder das gleiche wie im letzten Abstatz, dadurch kann einfacher entschlüsselt
+werden.
+
+
+## c)
+
+Ausgabe:
+00000000: 4865 727a 6c69 6368 656e 2047 6cfc 636b  Herzlichen Gl.ck
+00000010: 7775 6e73 6368 210a 0a53 6965 2068 6162  wunsch!..Sie hab
+00000020: 656e 2073 6f65 6265 6e20 5072 616b 7469  en soeben Prakti
+00000030: 6b75 6d20 3320 6265 7374 616e 6465 6e21  kum 3 bestanden!
+00000040: 0a0a 4a65 747a 7420 6665 686c 7420 6e75  ..Jetzt fehlt nu
+00000050: 7220 6e6f 6368 2050 7261 6b74 696b 756d  r noch Praktikum
+00000060: 2034 2e2e 2e0a 0000                       4......
+
+Die Ausgabe ist ebenfalls in der ./Aufgabe_10_c_Ausgabe File.
+
